@@ -44,3 +44,36 @@ class Student extends Person {
     }
 }
 
+class ProjectManagers extends Instructor {
+    constructor(PMAttr) {
+        super(PMAttr);
+        this.gradClassName = PMAttr.gradClassName;
+        this.favInstructor = PMAttr.favInstructor;
+    }
+    standUp() {
+        return `${name} announces to ${channel}, @channel standy times!`;
+    }
+    debugsCode() {
+        return `${name} debugs ${student.name}'s code on ${subject}`;
+    }
+}
+
+
+//--------- objects ----------//
+
+const fred = new Instructor({
+    name: 'Fred',
+    location: 'Bedrock',
+    age: 37,
+    favLanguage: 'JavaScript',
+    specialty: 'Front-end',
+    catchPhrase: `Don't forget the homies`
+});
+
+
+
+//---------- console.log ----------//
+
+console.log(fred.speak());
+
+
